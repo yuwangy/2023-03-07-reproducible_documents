@@ -1,0 +1,6 @@
+"0","library(palmerpenguins)"
+"0","library(knitr)"
+"0",""
+"0","source(""R/predict.R"")"
+"0",""
+"0","kable(head(penguins))"
