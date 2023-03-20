@@ -1,4 +1,0 @@
-"0","penguins <- penguins %>%"
-"0","  drop_na() %>% #todo: drop misssing value, clean this at top"
-"0","  mutate(my_predict = map2_chr(bill_length_mm, flipper_length_mm, classify_penguin))"
-"0","penguins"

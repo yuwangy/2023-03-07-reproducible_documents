@@ -3,31 +3,39 @@ title: "Penguin Analysis"
 author: "Yuyang Wang"
 date: "`r Sys.Date()`"
 output: html_document
+bibliography: citations.bib
 ---
 
+
 ```{r setup, include=FALSE}
+#penguins <- penguins %>%
 knitr::opts_chunk$set(echo = TRUE)
+
+#penguins
 ```
+
+This is the penguins dataset, but here's a citation for the UCI heart
+disease @bashir2014ensemble
+
 
 ```{r}
 library(palmerpenguins)
 library(knitr)
+library(here)
+
+
+print(getwd())
 
 source("R/predict.R")
 
 kable(head(penguins))
 ```
 
-
-
 ```{r, message=FALSE, warning=FALSE, fig.alt="this is screen reader"}
 
 library(tidyverse)
 
 ```
-
-
-
 
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, 
@@ -39,9 +47,8 @@ ggplot(penguins, aes(x = bill_length_mm,
 ```
 
 
-
-
 ```{r}
+
 penguins <- penguins %>%
   drop_na() %>% #todo: drop misssing value, clean this at top
   mutate(my_predict = map2_chr(bill_length_mm, flipper_length_mm, classify_penguin))
@@ -49,12 +56,12 @@ penguins
 
 ```
 
+
 ```{r}
 penguins %>%
   count(species, my_predict)
 
 ```
-
 
 ## R Markdown
 

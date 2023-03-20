@@ -1,6 +1,0 @@
-"0","ggplot(penguins, aes(x = bill_length_mm, "
-"0","                     y = flipper_length_mm,"
-"0","                     color = species)) +"
-"0","  geom_point() +"
-"0","  geom_hline(yintercept = 205) +"
-"0","  geom_vline(xintercept = 45)"

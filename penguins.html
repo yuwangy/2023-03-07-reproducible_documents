@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yuyang Wang" />
 
-<meta name="date" content="2023-03-15" />
+<meta name="date" content="2023-03-18" />
 
 <title>Penguin Analysis</title>
 
@@ -253,6 +253,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
 
 
 
@@ -352,15 +374,21 @@ display: none;
 
 <h1 class="title toc-ignore">Penguin Analysis</h1>
 <h4 class="author">Yuyang Wang</h4>
-<h4 class="date">2023-03-15</h4>
+<h4 class="date">2023-03-18</h4>
 
 </div>
 
 
+<p>This is the penguins dataset, but here’s a citation for the UCI heart
+disease <span class="citation">Bashir, Qamar, and Javed
+(2014)</span></p>
 <pre class="r"><code>library(palmerpenguins)
 library(knitr)
-
-source(&quot;R/predict.R&quot;)
+library(here)</code></pre>
+<pre><code>## here() starts at /Users/flashrunner/Desktop/2023-03-07-reproducible_documents</code></pre>
+<pre class="r"><code>print(getwd())</code></pre>
+<pre><code>## [1] &quot;/Users/flashrunner/Desktop/2023-03-07-reproducible_documents&quot;</code></pre>
+<pre class="r"><code>source(&quot;R/predict.R&quot;)
 
 kable(head(penguins))</code></pre>
 <table>
@@ -515,6 +543,14 @@ chunk like this:</p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the
 code chunk to prevent printing of the R code that generated the
 plot.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bashir2014ensemble" class="csl-entry">
+Bashir, Saba, Usman Qamar, and M Younus Javed. 2014. <span>“An Ensemble
+Based Decision Support Framework for Intelligent Heart Disease
+Diagnosis.”</span> In <em>International Conference on Information
+Society (i-Society 2014)</em>, 259–64. IEEE.
+</div>
+</div>
 </div>
 
 
